@@ -3,7 +3,7 @@
 :root {
    --main-color: #f4f5f6;
    --sub-color: #040320;
-   --white: #FEBE8C;
+   --white: #8D72E1;
    --border: .1rem solid #040320;
 }
 
@@ -122,7 +122,7 @@ section {
 }
 
 .header .navbar a:hover {
-
+   transition: .4s;
    color: var(--white);
 }
 
@@ -414,6 +414,11 @@ section {
    font-size: 2rem;
    border-radius: .5rem;
    cursor: pointer;
+}
+
+.contact .row .faq .box h3:hover {
+   color: var(--white);
+   transition: .4s;
 }
 
 .contact .row .faq .box p {
