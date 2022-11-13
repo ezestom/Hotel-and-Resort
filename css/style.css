@@ -48,7 +48,7 @@ body {
 }
 
 section {
-   padding: 3rem 2rem;
+   padding: 2rem 2rem;
    max-width: 1200px;
    margin: 30px auto;
 }
@@ -559,6 +559,12 @@ section {
 
    .header .navbar.active {
       display: flex;
+      position: fixed;
+      z-index: 2;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      opacity: 85%;
    }
 
 }
