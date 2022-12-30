@@ -69,7 +69,6 @@ section {
 }
 
 .btn:hover {
-   /* border-radius: 5rem; */
    background-color: var(--sub-color);
    color: var(--main-color);
    transition: .5s;
@@ -83,7 +82,7 @@ section {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 1.5rem;
+   padding-block: 1%;
 }
 
 .header .flex .logo {
@@ -104,13 +103,14 @@ section {
 }
 
 .header .navbar {
+   position: inherit;
    display: flex;
    align-items: center;
    justify-content: space-evenly;
+   width: 100%;   
+   left: 0;
    gap: 1.5rem;
-   margin-top: 2rem;
    background-color: var(--sub-color);
-   padding: .5rem;
    border-radius: 10px;
 }
 
@@ -511,30 +511,6 @@ section {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries  */
 
 @media (max-width:991px) {
@@ -552,21 +528,18 @@ section {
    }
 
    .header .navbar {
-      flex-flow: column;
-      padding: 2rem;
-      display: none;
-   }
-
-   .header .navbar.active {
       display: flex;
+      flex-direction: column;
       position: fixed;
       z-index: 2;
-      left: 0;
-      position: absolute;
       width: 100%;
       opacity: 85%;
+      top: -100%;
+      transition: top 0.5s;
    }
-
+   .header .navbar.active{
+      top: 12%;
+   }
 }
 
 @media (max-width:768px) {
@@ -579,7 +552,6 @@ section {
    .swiper-button-prev {
       top: 35%;
    }
-
 }
 
 @media (max-width:450px) {
